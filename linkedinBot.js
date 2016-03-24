@@ -12,7 +12,7 @@ function scrollDown(height){
 }
 
 function sendRequest(){
-	jQuery.each( $("div.card-wrapper > button:nth-child(2)"), 	function() {
+	jQuery.each( $("div.card-wrapper button.bt-request-buffed "), 	function() {
 		window.num++;		
 		$(this).click();
 		console.log($(this).attr('title')+' '+window.num);
