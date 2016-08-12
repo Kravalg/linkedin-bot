@@ -1,22 +1,23 @@
-window.height = document.body.clientHeight;
-window.num = 0;
-function scrollDown(height){
+var countOfPagesScrolled = 5;
+
+function scrollDown(height, countOfPagesScrolled){
 	scroll(0, document.body.clientHeight);
 	setTimeout(function(){
-		if(window.height != document.body.clientHeight){
-			window.height = document.body.clientHeight;
-			scrollDown(document.body.clientHeight);
+		if(height != document.body.clientHeight && countOfPagesScrolled > 0){
+			scrollDown(document.body.clientHeight, --countOfPagesScrolled);
 		}else
 			return sendRequest();
 	}, 1500);
 }
 
 function sendRequest(){
-	jQuery.each( $("div.card-wrapper button.bt-request-buffed "), 	function() {
-		window.num++;		
+	var contactsNum = 0;
+	jQuery.each( $('div.card-wrapper button.bt-request-buffed'), 	function() {
+		contactsNum++;
 		$(this).click();
-		console.log($(this).attr('title')+' '+window.num);
+		console.log($(this).attr('title') + ' ' + contactsNum);
 	});
+	console.log('Just added contacts: ' + contactsNum);
 }
 
-scrollDown(window.height);
+scrollDown(document.body.clientHeight, countOfPagesScrolled);
