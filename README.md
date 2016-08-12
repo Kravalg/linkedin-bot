@@ -9,7 +9,7 @@ Ctrl + Shift + I
 
 
 # Settings
-* countOfPagesScrolled -- responsible for the number of pages that the script will scroll. The default is 5 pages. You can change the number 5 to any other.
+* countOfPagesScrolled - responsible for the number of pages that the script will scroll. The default is 5 pages. You can change the number 5 to any other.
 
 
 
