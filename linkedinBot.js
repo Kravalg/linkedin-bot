@@ -12,7 +12,7 @@ function scrollDown(height, countOfPagesScrolled){
 
 function sendRequest(){
 	var contactsNum = 0;
-	jQuery.each( $('div.card-wrapper button.bt-request-buffed'), 	function() {
+	jQuery.each( $('button-secondary-small'), 	function() {
 		contactsNum++;
 		$(this).click();
 		console.log($(this).attr('title') + ' ' + contactsNum);
