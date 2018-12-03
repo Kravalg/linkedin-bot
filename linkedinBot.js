@@ -12,7 +12,7 @@ function scrollDown(height, countOfPagesScrolled){
 
 function sendRequest(){
 	var contactsNum = 0;
-	jQuery.each( $('.button-secondary-small'), 	function() {
+	jQuery.each( $('.artdeco-button'), 	function() {
 		contactsNum++;
 		$(this).click();
 		console.log($(this).attr('title') + ' ' + contactsNum);
